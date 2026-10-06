@@ -1,0 +1,15 @@
+name: Ubuntu Remote Server
+
+on:
+  workflow_dispatch:
+
+jobs:
+  run-server:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 360
+
+    steps:
+      - name: Start Direct tmate SSH
+        uses: mxschmitt/action-tmate@v3
+        with:
+          detached: false
